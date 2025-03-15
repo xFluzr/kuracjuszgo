@@ -1,11 +1,11 @@
-#KuracjuszGO – Gra mobilna motywująca do aktywności
+# KuracjuszGO – Gra mobilna motywująca do aktywności
   
-##📌 Opis:
+## 📌 Opis:
 
 Gra wykorzystująca mechanizmy grywalizacji, aby zachęcić kuracjuszy do aktywnego spędzania czasu. Za spacery, ćwiczenia czy
 udział w zajęciach rehabilitacyjnych użytkownicy zdobywają punkty, odznaki i osiągnięcia.
 
-##🎯 Główne funkcje:
+## 🎯 Główne funkcje:
  
   ● System punktowy za aktywności (spacery, ćwiczenia, uczestnictwo w zabiegach).
   
