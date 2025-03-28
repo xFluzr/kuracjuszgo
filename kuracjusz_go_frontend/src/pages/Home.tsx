@@ -1,7 +1,11 @@
+import LandingPage from "../components/LandingPage/LandingPage";
+import Navbar from "../components/Navbar/Navbar";
+
 const Home = () => {
   return (
-    <div>
-      <h1 className="text-4xl font-bold">Kuracjusz GO HOMEPAGE</h1>
+    <div className="lg:px-24 md:px-12 max-sm:px-4 w-full h-full">
+      <Navbar/>
+      <LandingPage/>
     </div>
   );
 };

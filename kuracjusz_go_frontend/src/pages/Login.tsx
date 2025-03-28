@@ -1,5 +1,14 @@
+import Navbar from "../components/Navbar/Navbar";
+
 const Login = () => {
-  return <div>Login Kuracjusz</div>;
+  return (
+    <>
+    <Navbar/>
+    <main>
+      Login form
+    </main>
+    </>
+  )
 };
 
 export default Login;
