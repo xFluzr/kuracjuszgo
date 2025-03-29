@@ -11,7 +11,7 @@ export default function NavbarLinks({ links }: NavbarLinksProps) {
           className=" flex justify-center items-center px-2 rounded-lg transition-all hover:shadow-sm"
           key={index}
         >
-          <Link className="text-gray-400 text-xl" to={link.href}>
+          <Link className="text-dark text-xl" to={link.href}>
             {link.label}
           </Link>
         </li>

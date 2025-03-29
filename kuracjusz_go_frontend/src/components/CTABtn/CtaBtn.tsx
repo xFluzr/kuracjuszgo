@@ -5,11 +5,13 @@ type ButtonProps = {
   link: string;
   isActive?: boolean;
 };
-export default function Button({ text, link }: ButtonProps) {
+export default function CtaBtn({ text, link }: ButtonProps) {
   return (
     <Link
       to={`/${link}`}
-      className="rounded-xl bg-slate-600 text-white px-24 mt-20 py-6 font-bold text-2xl"
+      className="rounded-xl bg-slate-600 text-white px-24 mt-20 
+      tracking-wider
+      py-6 font-bold text-4xl"
     >
       {text}
     </Link>

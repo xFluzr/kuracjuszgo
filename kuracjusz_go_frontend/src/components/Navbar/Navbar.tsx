@@ -8,8 +8,8 @@ const links = [
     href: "/about",
   },
   {
-    label: "About Us",
-    href: "/about",
+    label: "Get Started",
+    href: "/login",
   },
   {
     label: "About Us",
@@ -19,7 +19,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between py-12 ">
+    <nav className="flex justify-between py-12 z-1">
       <div>
         <Link to={"/"}>
           <img src={logo} alt="" />

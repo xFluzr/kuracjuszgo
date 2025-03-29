@@ -1,4 +1,4 @@
-import Button from "../Button/Button";
+import CtaBtn from "../CTABtn/CtaBtn";
 import landingPageImg from "../../assets/logoLanding.webp";
 import Opinions from "../Opinions/Opinions";
 export default function LandingPage() {
@@ -10,7 +10,7 @@ export default function LandingPage() {
           <br />
           Do <span className="text-orange-400">Zdrowia</span>
         </h1>
-        <Button link="login" text="Zacznij Zmianę" />
+        <CtaBtn link="login" text="Zacznij Zmianę" />
       </div>
       <div className="w-1/2  flex flex-col justify-center h-[calc(100vh-12rem)] relative">
         <img
