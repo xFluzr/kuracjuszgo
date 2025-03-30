@@ -1,10 +1,15 @@
-import { FormEvent } from "react";
+import { FormEvent, useRef } from "react";
 import { Link } from "react-router-dom";
 import UserInput from "./UserInput";
 
 export default function AuthForm() {
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const userNameRef = useRef<HTMLInputElement>(null);
+
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(passwordRef.current?.value);
+    console.log(userNameRef.current?.value);
   };
 
   return (
@@ -14,8 +19,18 @@ export default function AuthForm() {
     >
       <h2 className="text-left font-bold text-2xl w-full">Login</h2>
       <div className="flex flex-col gap-8 justify-start w-full">
-        <UserInput name="Username" type="string" val={""} />
-        <UserInput name="Password" type="password" val={""} />
+        <UserInput
+          ref={passwordRef}
+          name="Username"
+          type="string"
+          defaultVal={""}
+        />
+        <UserInput
+          ref={userNameRef}
+          name="Password"
+          type="password"
+          defaultVal={""}
+        />
       </div>
       <div className="flex justify-between gap-4 mt-4">
         <Link className="text-red-600 font-bold" to={""}>
