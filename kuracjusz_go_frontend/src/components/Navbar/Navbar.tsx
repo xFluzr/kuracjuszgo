@@ -15,6 +15,7 @@ const links = [
     label: "About Us",
     href: "/about",
   },
+  
 ];
 
 export default function Navbar() {

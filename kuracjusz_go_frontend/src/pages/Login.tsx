@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
       <Navbar />
-      <main className="flex  h-full items-center justify-center">
+      <main className="flex  h-3/4 items-center justify-center">
         <AuthForm />
       </main>
       <div className="w-full absolute left-0 top-0 -z-10">
