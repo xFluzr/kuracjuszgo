@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar/Navbar";
 
 const About = () => {
+  fetch("https:dupa")
+
   return (
     <>
       <Navbar />
