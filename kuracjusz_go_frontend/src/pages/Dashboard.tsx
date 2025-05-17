@@ -25,6 +25,7 @@ import CustomLogo from "../components/CustomLogo/CustomLogo";
 import GoHomeButton from "../components/GoHomeBtn/GoHomeBtn";
 import FitnessDashboard from "../components/Dashboards/FitnessDashboard";
 import HistoryDashboard from "../components/Dashboards/HistoryDashboard";
+import AchievementDashboard from "../components/Dashboards/AchievmentDashboard";
 
 const NAVIGATION: Navigation = [
   { kind: "header", title: "Możliwe Opcje" },
@@ -98,6 +99,7 @@ export default function DashboardLayoutCustomThemeSwitcher({ window }: { window?
     switch (router.pathname) {
       case "/dashboard": return <FitnessDashboard />;
       case "/history":return <HistoryDashboard/>
+      case "/achievement":return <AchievementDashboard/>
   
       default: return <Typography>Nieznana sekcja: {router.pathname}</Typography>;
     }

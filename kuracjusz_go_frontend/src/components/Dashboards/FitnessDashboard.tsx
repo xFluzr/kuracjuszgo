@@ -40,6 +40,16 @@ export default function FitnessDashboard() {
     const storedPoints = Number(localStorage.getItem("points") || 0);
     setSteps(storedSteps);
     setPoints(storedPoints);
+
+    // Zainicjalizuj osiągnięcia, jeśli brak
+    if (!localStorage.getItem("stepsToday")) {
+      localStorage.setItem("stepsToday", storedSteps.toString());
+    }
+    if (!localStorage.getItem("activitiesCompleted")) {
+      const stored = localStorage.getItem("activities");
+      const existingActivities: Activity[] = stored ? JSON.parse(stored) : [];
+      localStorage.setItem("activitiesCompleted", existingActivities.length.toString());
+    }
   }, []);
 
   useEffect(() => {
@@ -53,6 +63,7 @@ export default function FitnessDashboard() {
       setSteps((prevSteps) => {
         const newSteps = prevSteps + 1;
         localStorage.setItem("steps", newSteps.toString());
+        localStorage.setItem("stepsToday", newSteps.toString()); // <- kluczowe
         return newSteps;
       });
     }, 750);
@@ -70,13 +81,15 @@ export default function FitnessDashboard() {
       timestamp: new Date().toLocaleString(),
     };
 
-    // Zapisywanie do localStorage (historia)
+    // Zapisywanie do historii
     const stored = localStorage.getItem("activities");
     const existingActivities: Activity[] = stored ? JSON.parse(stored) : [];
     const updatedActivities = [...existingActivities, activity];
     localStorage.setItem("activities", JSON.stringify(updatedActivities));
 
-    // Punkty do lokalnego stanu
+    // Aktualizacja liczby aktywności
+    localStorage.setItem("activitiesCompleted", updatedActivities.length.toString());
+
     setPoints((prev) => prev + activityPoints);
     setNewActivity("");
   };
