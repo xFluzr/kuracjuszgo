@@ -2,6 +2,7 @@ import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import logo from "../../assets/logoNavbar.svg";
 import { Link } from "react-router-dom";
 
+
 const links = [
   {
     label: "About Us",
