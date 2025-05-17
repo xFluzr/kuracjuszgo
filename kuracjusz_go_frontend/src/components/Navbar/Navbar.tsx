@@ -1,13 +1,12 @@
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import logo from "../../assets/logoNavbar.svg";
 import { Link } from "react-router-dom";
-
+import { Box, IconButton } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TikTokIcon from "@mui/icons-material/MusicNote"; //
 
 const links = [
-  {
-    label: "About Us",
-    href: "/about",
-  },
   {
     label: "Get Started",
     href: "/login",
@@ -16,7 +15,6 @@ const links = [
     label: "About Us",
     href: "/about",
   },
-  
 ];
 
 export default function Navbar() {
@@ -28,11 +26,19 @@ export default function Navbar() {
         </Link>
       </div>
       <NavbarLinks links={links} />
-      <ul className="flex-1 flex text-4xl justify-center gap-4 items-center">
-        <li>Tiktok</li> 
-        <li>Insta</li> 
-        <li>Face</li> 
-      </ul>
+      <Box
+        sx={{ flex: 1, display: "flex", justifyContent: "flex-end", gap: 1 }}
+      >
+        <IconButton color="inherit" aria-label="Instagram">
+          <InstagramIcon />
+        </IconButton>
+        <IconButton color="inherit" aria-label="Facebook">
+          <FacebookIcon />
+        </IconButton>
+        <IconButton color="inherit" aria-label="TikTok">
+          <TikTokIcon />
+        </IconButton>
+      </Box>
     </nav>
   );
 }
