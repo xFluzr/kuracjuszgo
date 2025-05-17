@@ -23,13 +23,17 @@ import { DemoProvider, useDemoRouter } from "@toolpad/core/internal";
 
 import CustomLogo from "../components/CustomLogo/CustomLogo";
 import GoHomeButton from "../components/GoHomeBtn/GoHomeBtn";
-import FitnessDashboard from "../components/Dashboards/FitnessDashboard";
-import HistoryDashboard from "../components/Dashboards/HistoryDashboard";
+import FitnessDashboard from "../components/Dashboards";
+import ActivityHistory from "../components/ActivityHistory";
+import Achievements from "../components/Achievements";
+import GroupPanel from "../components/GroupPanel";
+import DailyQuests from "../components/DailyQuests";
+import Rankings from "../components/Rankings";
 
 const NAVIGATION: Navigation = [
   { kind: "header", title: "Możliwe Opcje" },
   { segment: "dashboard", title: "Moje Aktywności", icon: <SportsGymnasticsIcon /> },
-  { segment: "history", title: "Historia Aktywności", icon: <HistoryIcon /> },
+  { segment: "orders", title: "Historia Aktywności", icon: <HistoryIcon /> },
   { segment: "achievement", title: "Osiągniecia", icon: <EmojiEventsIcon /> },
   { segment: "group", title: "Moja Grupa", icon: <GroupIcon /> },
   { segment: "quests", title: "Dzisiejsze Zadania", icon: <CheckBoxOutlinedIcon /> },
@@ -97,8 +101,11 @@ export default function DashboardLayoutCustomThemeSwitcher({ window }: { window?
   const renderContent = () => {
     switch (router.pathname) {
       case "/dashboard": return <FitnessDashboard />;
-      case "/history":return <HistoryDashboard/>
-  
+      case "/orders": return <ActivityHistory />;
+      case "/achievement": return <Achievements />;
+      case "/group": return <GroupPanel />;
+      case "/quests": return <DailyQuests />;
+      case "/ranking": return <Rankings />;
       default: return <Typography>Nieznana sekcja: {router.pathname}</Typography>;
     }
   };
