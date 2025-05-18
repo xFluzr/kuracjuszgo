@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, Card, CardContent, Avatar, Grid, List, ListItem, ListItemAvatar, ListItemText, Divider } from "@mui/material";
+import { Box, Typography, Card, CardContent, Avatar, List, ListItem, ListItemAvatar, ListItemText, Divider } from "@mui/material";
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
 

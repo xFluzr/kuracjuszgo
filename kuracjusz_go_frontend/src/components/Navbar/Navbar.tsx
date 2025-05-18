@@ -1,4 +1,3 @@
-import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import logo from "../../assets/logoNavbar.svg";
 import { Link } from "react-router-dom";
 import { Box, IconButton } from "@mui/material";
@@ -6,16 +5,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TikTokIcon from "@mui/icons-material/MusicNote"; //
 
-const links = [
-  {
-    label: "Get Started",
-    href: "/login",
-  },
-  {
-    label: "About Us",
-    href: "/about",
-  },
-];
 
 export default function Navbar() {
   return (
@@ -25,7 +14,7 @@ export default function Navbar() {
           <img src={logo} alt="" />
         </Link>
       </div>
-      <NavbarLinks links={links} />
+     
       <Box
         sx={{ flex: 1, display: "flex", justifyContent: "flex-end", gap: 1 }}
       >

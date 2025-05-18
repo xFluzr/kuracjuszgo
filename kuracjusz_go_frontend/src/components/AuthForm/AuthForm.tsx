@@ -1,5 +1,5 @@
 import { FormEvent, useRef, useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import UserInput from "./UserInput";
 
 export default function AuthForm() {
@@ -58,7 +58,7 @@ export default function AuthForm() {
   return (
     <form
       onSubmit={isForgotMode ? handleResetCredentials : handleLoginSubmit}
-      className="flex flex-col justify-center items-center gap-8 md-gap px-24 bg-white py-12 rounded-lg relative"
+      className="flex flex-col shadow-lg justify-center items-center gap-8 md-gap px-24 bg-white py-12 rounded-lg relative"
     >
       <h2 className="text-left font-bold text-2xl w-full">
         {isForgotMode ? "Resetuj Dane Logowania" : "Login"}
@@ -96,7 +96,7 @@ export default function AuthForm() {
           <button
             type="button"
             onClick={() => setIsForgotMode(false)}
-            className="text-blue-500 font-bold"
+            className="text-blue-500 shadow-lg font-bold"
           >
             Wróć do logowania
           </button>
@@ -106,7 +106,7 @@ export default function AuthForm() {
 
       <button
         type="submit"
-        className="text-2xl bg-orange-400 px-12 py-2 rounded-full absolute -bottom-4 font-bold"
+        className="text-2xl bg-dark_oragne-0 px-12 py-2 rounded-full absolute -bottom-4 font-bold"
       >
         {isForgotMode ? "Zapisz nowe dane" : "Zaloguj"}
       </button>
