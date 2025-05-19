@@ -9,7 +9,7 @@ const Login = () => {
         <AuthForm />
       </main>
       <div className="w-full absolute left-0 top-0 -z-10">
-        <img src={bgIMG} alt="bg-img" className="w-full h-full object-cover" />
+        <img src={bgIMG} alt="bg-img" className="w-full h-full block object-cover" />
       </div>
     </>
   );
