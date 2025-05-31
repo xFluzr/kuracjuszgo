@@ -8,7 +8,7 @@ import TikTokIcon from "@mui/icons-material/MusicNote"; //
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between py-12 z-10 relative text-beige-0  text-center">
+    <nav className="flex justify-between py-12 z-10 relative text-beige-0 lg:px-12 sm:px-4  text-center">
       <div className="flex-1">
         <Link to={"/"}>
           <img src={logo} alt="" />

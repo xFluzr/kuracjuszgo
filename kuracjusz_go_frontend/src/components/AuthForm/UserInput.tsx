@@ -18,7 +18,7 @@ export default forwardRef<HTMLInputElement, userInputType>(function UserInput(
       name={name}
       defaultValue={defaultVal}
       type={type}
-      className="border-b-2 text-xl pb-2 focus:outline  outline-none border-black"
+      className="border-b-2 text-3xl py-2 px-2  focus:outline  outline-none border-black"
     />
   );
 });
